@@ -169,6 +169,34 @@
   animation: waitlist-success-in 0.45s ease-out;
 }
 
+.waitlist-form.is-success-state .fields,
+.waitlist-form.is-success-state .actions {
+  display: none;
+}
+
+.waitlist-form.is-success-state .waitlist-feedback.is-success {
+  margin-top: 0;
+}
+
+.waitlist-reset-link {
+  margin-top: 0.65em;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: Raleway, Helvetica, sans-serif;
+  font-size: 0.82em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: underline;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.waitlist-reset-link:hover {
+  color: #fff;
+}
+
 .waitlist-feedback-icon {
   font-size: 2.25rem;
   color: #8ee4b0;

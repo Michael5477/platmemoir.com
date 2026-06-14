@@ -19,6 +19,15 @@
     return el;
   }
 
+  function resetWaitlistForm(form) {
+    form.classList.remove('is-success-state');
+    setFeedback(form, '', '');
+    var emailInput = form.querySelector('input[name="email"]');
+    if (emailInput) {
+      emailInput.focus();
+    }
+  }
+
   function setFeedback(form, message, type) {
     var el = getFeedbackEl(form);
     el.className = 'waitlist-feedback' + (type ? ' is-' + type : '');
@@ -27,11 +36,14 @@
       el.innerHTML =
         '<span class="waitlist-feedback-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></span>' +
         '<strong class="waitlist-feedback-title">You\'re on the list!</strong>' +
-        '<span class="waitlist-feedback-detail">We\'ll email you when hardcover publishing opens.</span>';
+        '<span class="waitlist-feedback-detail">We\'ll email you when hardcover publishing opens.</span>' +
+        '<button type="button" class="waitlist-reset-link">Use a different email</button>';
       el.hidden = false;
+      form.classList.add('is-success-state');
       return;
     }
 
+    form.classList.remove('is-success-state');
     el.textContent = message || '';
     el.hidden = !message;
   }
@@ -53,6 +65,14 @@
     if (utmSourceInput && utmSource) utmSourceInput.value = utmSource;
     if (utmMediumInput && utmMedium) utmMediumInput.value = utmMedium;
 
+    form.addEventListener('click', function (event) {
+      if (!event.target.closest('.waitlist-reset-link')) {
+        return;
+      }
+      event.preventDefault();
+      resetWaitlistForm(form);
+    });
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -64,6 +84,7 @@
       var submitControl = getSubmitControl(form);
       var defaultLabel = submitControl ? (submitControl.value || submitControl.textContent) : 'Join waitlist';
       var emailInput = form.querySelector('input[name="email"]');
+      var succeeded = false;
 
       setFeedback(form, '', '');
       if (submitControl) {
@@ -89,6 +110,7 @@
         })
         .then(function (result) {
           if (result.ok) {
+            succeeded = true;
             setFeedback(form, '', 'success');
             if (emailInput) {
               emailInput.value = '';
@@ -114,13 +136,14 @@
           );
         })
         .finally(function () {
-          if (submitControl) {
-            submitControl.disabled = false;
-            if (submitControl.tagName === 'INPUT') {
-              submitControl.value = defaultLabel;
-            } else {
-              submitControl.textContent = defaultLabel;
-            }
+          if (succeeded || !submitControl) {
+            return;
+          }
+          submitControl.disabled = false;
+          if (submitControl.tagName === 'INPUT') {
+            submitControl.value = defaultLabel;
+          } else {
+            submitControl.textContent = defaultLabel;
           }
         });
     });
