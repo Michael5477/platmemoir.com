@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#2e3141"/>
+  <circle cx="180" cy="220" r="8" fill="#c9a227"/>
+  <circle cx="320" cy="180" r="8" fill="#c9a227"/>
+  <circle cx="420" cy="280" r="8" fill="#c9a227"/>
+  <circle cx="260" cy="340" r="8" fill="#c9a227"/>
+  <path d="M180 220 Q250 200 320 180 T420 280" fill="none" stroke="#c9a227" stroke-width="2"/>
+  <path d="M320 180 Q340 260 260 340" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <ellipse cx="300" cy="300" rx="220" ry="120" fill="none" stroke="#4c5c96" stroke-width="1" opacity="0.6"/>
+  <text x="300" y="500" text-anchor="middle" fill="#e8d5a3" font-family="system-ui,sans-serif" font-size="14">Travel plan map · mockup</text>
+</svg>

@@ -1,40 +1,195 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP — customized for PlatMemoir
+	html5up.net | @ajlkn | CCA 3.0 license
+-->
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>PlatMemoir — Your travel map &amp; memoir</title>
-  <meta name="description" content="PlatMemoir turns geotagged photos into a living travel map, stories, and shareable memoir exports."/>
-  <link rel="stylesheet" href="/assets/site.css"/>
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-inner">
-      <img class="logo" src="/assets/platmemoir-logo.png" alt="PlatMemoir"/>
-      <h1>Your journey, on the map</h1>
-      <p class="lead">PlatMemoir reads location data from your photos and builds an interactive map of where you have been—add short memories, plan future trips, and export travel lists or memoir PDFs.</p>
-      <nav class="site-nav" aria-label="Site">
-        <a href="/privacy/">Privacy</a>
-        <a href="/support/">Support</a>
-      </nav>
-    </div>
-  </header>
-  <main class="content">
-    <div class="card">
-      <h2 style="margin-top:0">iOS app</h2>
-      <p>PlatMemoir is available on iPhone and iPad. Import footprints from iCloud Photos or Google Takeout, explore achievements and travel plans, and share map snapshots with friends.</p>
-      <p><em>App Store link can be added here when your listing is live.</em></p>
-    </div>
-    <h2>What you can do</h2>
-    <ul>
-      <li>Automatic map pins from geotagged photos</li>
-      <li>Stories attached to moments on the map</li>
-      <li>Travel plan &amp; UNESCO heritage planning</li>
-      <li>PDF exports: travel plan, achievements, and LLM-ready memoir packages</li>
-    </ul>
-  </main>
-  <footer class="site-foot">
-    <p>&copy; PlatMemoir. <a href="/privacy/">Privacy</a> · <a href="/support/">Support</a></p>
-  </footer>
-</body>
+	<head>
+		<title>PlatMemoir — Turn travel photos into memoirs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="PlatMemoir turns geotagged travel photos into a living map, stories, and PDF memoir exports—in your language. Hardcover publishing coming Q4 2026." />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/platmemoir.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="page-wrapper">
+
+			<header id="header" class="alt">
+				<h1><a href="/" class="header-logo-link"><img class="header-logo" src="/assets/platmemoir-logo.png" alt="PlatMemoir" /></a></h1>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/photobook/">Hardcover 2026</a></li>
+						<li><a href="/faq/">FAQ</a></li>
+						<li><a href="/privacy/">Privacy</a></li>
+						<li><a href="/support/">Support</a></li>
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav>
+
+			<!-- Hero -->
+			<section id="banner">
+				<div class="inner">
+					<div class="logo"><span class="icon icon-app"><img src="/assets/app-icon.jpg" alt="PlatMemoir app icon" /></span></div>
+					<h2>Turn travel photos into memoirs</h2>
+					<p class="tagline">Geotagged travel photos become a living map, stories, and styled PDF exports—collect each journey now; bind them into one hardcover volume in 2026.</p>
+				</div>
+			</section>
+
+			<section id="wrapper">
+
+				<!-- Mockup #3 — A story behind a photo -->
+				<section id="one" class="wrapper spotlight style1">
+					<div class="inner">
+						<a href="#four" class="image"><img src="/images/pic-story.jpg" alt="Collage of travel photos and a memoir page" /></a>
+						<div class="content">
+							<h2 class="major">A story behind every photo</h2>
+							<p>Attach memories to the map—type or speak in any language. Green footprint pins become the raw material for your next memoir chapter: photos, mood notes, and place names woven into a Letter-size PDF.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Mockup #5 — Proud of your travel achievement -->
+				<section id="two" class="wrapper alt spotlight style2">
+					<div class="inner">
+						<a href="#two" class="image"><img src="/images/pic-achievement.jpg" alt="Vintage world map with compass rose" /></a>
+						<div class="content">
+							<h2 class="major">Proud of your travel achievements</h2>
+							<p>Achievements reflect where you have already been—countries visited and highest points reached. Share your progress two ways: export a PDF listing every country you have visited, or create a map snapshot that highlights those countries across Asia Pacific, EMEA, or the Americas.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Mockup #7 — Develop your travel plan -->
+				<section id="three" class="wrapper spotlight style3">
+					<div class="inner">
+						<a href="#three" class="image"><img src="/images/pic-plan.jpg" alt="World map with travel routes and destination pins" /></a>
+						<div class="content">
+							<h2 class="major">Build your travel plan</h2>
+							<p>Shape each year's itinerary in the app—planned countries and UNESCO World Heritage sites you want to visit. Export a polished PDF with both lists together, ready to share, revise, or pack for your next trip.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- Multilingual PDF + other exports -->
+				<section id="four" class="wrapper alt style1">
+					<div class="inner">
+						<h2 class="major">Memoirs in your language</h2>
+						<p>Memoir PDFs follow the language you set in the app—story language or English. The examples below show the same Alaska port call in English, Spanish, Traditional Chinese, and Japanese. In practice, your chapter can follow the language you use in your stories—not only these four.</p>
+						<section class="features">
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/memoir-en.jpg" alt="Memoir PDF export in English" /></a>
+								<h3 class="lang-tag">English</h3>
+								<h3 class="major">Memoir PDF</h3>
+								<p>A chapter in natural English—from your green pins, photos, and notes.</p>
+							</article>
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/memoir-es.jpg" alt="Memoir PDF export in Spanish" /></a>
+								<h3 class="lang-tag">Español</h3>
+								<h3 class="major">Memoir PDF</h3>
+								<p>The same chapter in natural Spanish—ready to share with family abroad.</p>
+							</article>
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/memoir-zh.jpg" alt="Memoir PDF export in Chinese" /></a>
+								<h3 class="lang-tag">繁體中文</h3>
+								<h3 class="major">Memoir PDF</h3>
+								<p>The same chapter in Traditional Chinese—drawn from the stories you saved on the map.</p>
+							</article>
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/memoir-ja.jpg" alt="Memoir PDF export in Japanese" /></a>
+								<h3 class="lang-tag">日本語</h3>
+								<h3 class="major">Memoir PDF</h3>
+								<p>The same chapter in Japanese—from your green pins, photos, and notes.</p>
+							</article>
+						</section>
+						<h2 class="major">Export where you've been and where you're going</h2>
+						<p>Achievement lists, travel plans, and map snapshots export in English only—where you have been, where you plan to go, and how it looks on the map. Together with your memoir PDFs, they become the chapters of tomorrow's hardcover.</p>
+						<section class="features">
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/export-achievement.jpg" alt="Achievement list PDF export" /></a>
+								<h3 class="major">Achievement list PDF</h3>
+								<p>Countries visited and highest points reached—exported as a styled Letter-size PDF.</p>
+							</article>
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/export-plan.jpg" alt="Travel plan PDF export" /></a>
+								<h3 class="major">Travel plan PDF</h3>
+								<p>Planned countries and UNESCO sites by year—both lists in one polished PDF.</p>
+							</article>
+							<article>
+								<a href="#four" class="image"><img src="/assets/exports/export-map.jpg" alt="Map snapshot export" /></a>
+								<h3 class="major">Map snapshot</h3>
+								<p>Visited countries highlighted on a map—Asia Pacific, EMEA, or the Americas.</p>
+							</article>
+							<article>
+								<span class="image"><img src="/images/hero-hardcover.jpg" alt="Hardcover memoir preview" /></span>
+								<h3 class="major">Hardcover 2026</h3>
+								<p>Collect memoir PDFs after each trip—we bind them into one leather volume. Early bird 20% off.</p>
+								<p class="status-label">Coming soon</p>
+							</article>
+						</section>
+						<section class="app-store-promo" aria-labelledby="app-store-promo-title">
+							<h2 class="app-store-promo-title" id="app-store-promo-title">Map your trips.<br/>Write your story.</h2>
+							<p class="app-store-promo-lead">PlatMemoir on iPhone and iPad turns geotagged photos into a living travel map, stories on the map, and styled PDF memoir exports—in your language.</p>
+							<a id="app-store-link" class="app-store-button" href="#">Download on App Store</a>
+						</section>
+						<p class="waitlist-status">Join hardcover waitlist</p>
+					</div>
+				</section>
+
+			</section>
+
+			<!-- Footer: email waitlist -->
+			<section id="footer">
+				<div class="inner">
+					<h2 class="major">Hardcover waitlist · Q4 2026</h2>
+					<p class="waitlist-note">Leave your email to hear when publishing opens. If you arrived from the PlatMemoir app, you are in the right place—early bird members receive <strong>20% off</strong> the future list price.</p>
+					<form class="waitlist-form" data-source="homepage" id="waitlist-form">
+						<input type="hidden" name="source" value="homepage" />
+						<input type="hidden" name="utm_source" value="" />
+						<input type="hidden" name="utm_medium" value="" />
+						<input type="hidden" name="_subject" value="PlatMemoir hardcover waitlist (homepage)" />
+						<div class="fields field-narrow">
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" placeholder="you@example.com" required />
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Join waitlist" /></li>
+						</ul>
+					</form>
+					<ul class="contact">
+						<li class="icon solid fa-shield-alt"><a href="/privacy/">Privacy policy</a></li>
+						<li class="icon solid fa-life-ring"><a href="/support/">App support</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; PlatMemoir. All rights reserved.</li>
+						<li>Design: <a href="https://html5up.net/solid-state">Solid State</a> by HTML5 UP</li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/jquery.scrollex.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script src="/assets/waitlist-config.js"></script>
+		<script src="/assets/waitlist.js"></script>
+		<script src="/assets/app-store.js"></script>
+	</body>
 </html>

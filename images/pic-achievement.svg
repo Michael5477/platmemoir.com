@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#3d2b1f"/>
+  <circle cx="300" cy="280" r="120" fill="none" stroke="#c9a227" stroke-width="3"/>
+  <path d="M300 160 L300 400 M180 280 L420 280" stroke="#c9a227" stroke-width="2"/>
+  <path d="M240 220 Q300 200 360 220" fill="none" stroke="#e8d5a3" stroke-width="1.5"/>
+  <path d="M220 340 Q300 360 380 340" fill="none" stroke="#e8d5a3" stroke-width="1.5"/>
+  <text x="300" y="480" text-anchor="middle" fill="#c9a227" font-family="Georgia,serif" font-size="16">Vintage map · mockup</text>
+</svg>

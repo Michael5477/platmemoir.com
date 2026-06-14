@@ -2,53 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title>Privacy Policy — PlatMemoir</title>
-  <link rel="stylesheet" href="/assets/site.css"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link rel="stylesheet" href="/assets/css/platmemoir.css"/>
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
 </head>
-<body>
-  <header class="hero">
-    <div class="hero-inner">
-      <a href="/"><img class="logo" src="/assets/platmemoir-logo.png" alt="PlatMemoir"/></a>
-      <h1>Privacy Policy</h1>
-      <p class="lead">Last updated: May 26, 2026</p>
-      <nav class="site-nav" aria-label="Site">
-        <a href="/">Home</a>
-        <a href="/support/">Support</a>
+<body class="is-preload">
+
+  <div id="page-wrapper">
+
+    <header id="header" class="alt">
+      <h1><a href="/" class="header-logo-link"><img class="header-logo" src="/assets/platmemoir-logo.png" alt="PlatMemoir"/></a></h1>
+      <nav>
+        <a href="#menu">Menu</a>
       </nav>
-    </div>
-  </header>
-  <main class="content">
-    <p>PlatMemoir (&quot;we&quot;, &quot;the app&quot;) is designed so your photos and location history stay on your device. This policy describes what the app accesses and what we do not collect.</p>
+    </header>
 
-    <h2>Data on your device</h2>
-    <ul>
-      <li><strong>Photos library</strong> — With your permission, the app reads GPS metadata and thumbnails from photos on this device (including iCloud-synced items) to place pins on the map. Images are not uploaded to PlatMemoir servers.</li>
-      <li><strong>Google Takeout</strong> — If you choose to import, you select a folder or archive on your device. Parsing happens locally.</li>
-      <li><strong>Stories, plans, and settings</strong> — Stored locally in the app’s database. Handoff backups you export are files you save yourself (e.g. to Files or iCloud Drive).</li>
-    </ul>
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/photobook/">Hardcover 2026</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+        <a href="#" class="close">Close</a>
+      </div>
+    </nav>
 
-    <h2>What we do not do</h2>
-    <ul>
-      <li>We do not operate a cloud account that stores your photo library.</li>
-      <li>We do not sell personal data.</li>
-      <li>Exports you create (PDF, ZIP, map snapshots) are shared only when you use the system share sheet.</li>
-    </ul>
+    <section id="banner" class="page-sub-banner">
+      <div class="inner">
+        <h2>Privacy</h2>
+      </div>
+    </section>
 
-    <h2>Third-party services</h2>
-    <p>Map display uses Apple MapKit on device. If you use speech-to-text for stories, recognition may use Apple’s on-device or system speech services according to your device settings.</p>
+    <section id="wrapper">
+      <section class="wrapper alt style2 page-content">
+        <div class="inner">
+          <p class="page-meta">Last updated: May 26, 2026</p>
+          <p>PlatMemoir (&quot;we&quot;, &quot;the app&quot;) is designed so your photos and location history stay on your device. This policy describes what the app accesses and what we do not collect.</p>
 
-    <h2>Children</h2>
-    <p>The app is not directed at children under 13.</p>
+          <h3>Data on your device</h3>
+          <ul>
+            <li><strong>Photos library</strong> — With your permission, the app reads GPS metadata and thumbnails from photos on this device (including iCloud-synced items) to place pins on the map. Images are not uploaded to PlatMemoir servers.</li>
+            <li><strong>Google Takeout</strong> — If you choose to import, you select a folder or archive on your device. Parsing happens locally.</li>
+            <li><strong>Stories, plans, and settings</strong> — Stored locally in the app’s database. Handoff backups you export are files you save yourself (e.g. to Files or iCloud Drive).</li>
+          </ul>
 
-    <h2>Changes</h2>
-    <p>We may update this page. Continued use of the app after changes means you accept the updated policy.</p>
+          <h3>What we do not do</h3>
+          <ul>
+            <li>We do not operate a cloud account that stores your photo library.</li>
+            <li>We do not sell personal data.</li>
+            <li>Exports you create (PDF, ZIP, map snapshots) are shared only when you use the system share sheet.</li>
+          </ul>
 
-    <h2>Contact</h2>
-    <p>Questions: see our <a href="/support/">Support</a> page.</p>
-  </main>
-  <footer class="site-foot">
-    <p><a href="/">PlatMemoir</a> · <a href="/support/">Support</a></p>
-  </footer>
+          <h3>Third-party services</h3>
+          <p>Map display uses Apple MapKit on device. If you use speech-to-text for stories, recognition may use Apple’s on-device or system speech services according to your device settings.</p>
+
+          <h3>Children</h3>
+          <p>The app is not directed at children under 13.</p>
+
+          <h3>Changes</h3>
+          <p>We may update this page. Continued use of the app after changes means you accept the updated policy.</p>
+
+          <h3>Contact</h3>
+          <p>Questions: see our <a href="/support/">Support</a> page.</p>
+        </div>
+      </section>
+    </section>
+
+    <section id="footer" class="footer-minimal">
+      <div class="inner">
+        <ul class="contact">
+          <li class="icon solid fa-home"><a href="/">Home</a></li>
+          <li class="icon solid fa-life-ring"><a href="/support/">App support</a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; PlatMemoir. All rights reserved.</li>
+          <li>Design: <a href="https://html5up.net/solid-state">Solid State</a> by HTML5 UP</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.scrollex.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

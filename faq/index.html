@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>FAQ — PlatMemoir</title>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link rel="stylesheet" href="/assets/css/platmemoir.css"/>
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
+</head>
+<body class="is-preload">
+
+  <div id="page-wrapper">
+
+    <header id="header" class="alt">
+      <h1><a href="/" class="header-logo-link"><img class="header-logo" src="/assets/platmemoir-logo.png" alt="PlatMemoir"/></a></h1>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/photobook/">Hardcover 2026</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+        <a href="#" class="close">Close</a>
+      </div>
+    </nav>
+
+    <section id="banner" class="page-sub-banner">
+      <div class="inner">
+        <h2>FAQ</h2>
+      </div>
+    </section>
+
+    <section id="wrapper">
+      <section class="wrapper alt style2 page-content">
+        <div class="inner">
+
+          <div class="faq-item">
+            <h3 class="faq-question">What do I see the first time I open the app?</h3>
+            <div class="faq-answer">
+              <p>You see an Apple Map with blue dots and country flags. Those dots are photo locations loaded from iCloud over time. By default the app uses your full iCloud history; you can narrow the date range in Settings. Four icons in the top-right corner open Achievements, Travel Plans, Settings, and Share.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">What can I do with a photo spot (a small blue dot)?</h3>
+            <div class="faq-answer">
+              <p>Tap a spot to select it—it turns orange and shows the photos taken there. Tap “Add a short memory for this moment…” to write or dictate a note.</p>
+              <ul>
+                <li>Typing: you can use any language you like.</li>
+                <li>Speak: on-device speech recognition follows your iPhone or iPad language settings (Settings → General → Language &amp; Region). It only works reliably for languages Apple supports for that configuration.</li>
+              </ul>
+              <p>These notes are packaged into llm_task_prompt.txt for your preferred LLM to polish into a travel memoir with photos, which you can preview in the app and export as a PDF.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">What do the map dot colors mean?</h3>
+            <div class="faq-answer">
+              <ul>
+                <li>Blue — no story yet for that photo location.</li>
+                <li>Green — has a story and is included in the PDF / memoir export by default.</li>
+                <li>Red — has a story but is excluded from PDF export.</li>
+                <li>White with a blue border — the photo is hidden on the map.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">What are the four icons in the top-right corner?</h3>
+            <div class="faq-answer">
+              <p>A — Footprint &amp; Achievements<br/>
+              B — Travel Plans<br/>
+              C — Settings<br/>
+              D — Share (exports and sharing)</p>
+              <p>The sections below explain each one.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">A. Footprint &amp; Achievements — what does it do?</h3>
+            <div class="faq-answer">
+              <p>It shows how many countries and territories you have visited (out of the app’s full list), your highest altitude from photo metadata (excluding hidden photos), and a breakdown by place. Visits are inferred automatically from your photos’ GPS data; you can manually add or remove countries if something looks wrong.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">B. Travel Plans — what does it do?</h3>
+            <div class="faq-answer">
+              <p>Plan future trips by year: countries and territories, or UNESCO World Heritage sites you intend to visit. Plans appear on the map as pulsing markers with a color per year. Countries use their flags; UNESCO sites use a dedicated marker style.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">C. Settings — Part 1: data, range, and map overlays</h3>
+            <div class="faq-answer">
+              <ul>
+                <li>Photo time range — choose how much of your iCloud photo history to scan for locations (default: all time). This controls which photos become pins on the map and the “location points” counts in Settings.</li>
+                <li>Google Takeout — see the FAQ section “Google Takeout (JSON and JPG/HEIC)” for import details.</li>
+                <li>Statistics — counts of location points within the active scan/filter range.</li>
+                <li>Map — choose which travel-plan years appear (default: All). Toggle visited-country flags and the highest-altitude marker (both on by default).</li>
+              </ul>
+              <p>Achievements (visited countries, highest altitude, and the Achievement PDF) intentionally use your lifetime footprint across scans, so narrowing the scan does not erase past peaks or countries you already unlocked. Highest altitude ignores hidden photos; see the FAQ entry “Highest altitude and in-flight photos.”</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Highest altitude and in-flight photos</h3>
+            <div class="faq-answer">
+              <p>Highest altitude uses GPS elevation from your photos across all scans (not limited by scan date range). Cabin or in-flight photos often report very high altitudes (for example above 10,000 m).</p>
+              <p>Hidden photos (white dot with blue border) are excluded from the highest-point calculation. The mountain marker on the map, the Achievement highest-altitude stat, and map snapshot stats update immediately when you hide or restore a photo. If you hide the current highest photo, the next-highest non-hidden photo takes its place; restoring that photo brings the title back when it is still the highest among visible photos.</p>
+              <p>Hiding a photo does not change visited-country flags or counts. For in-flight shots you do not want counted as your travel peak, hide them on the map.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">C. Settings — Part 2: which dots appear on the map?</h3>
+            <div class="faq-answer">
+              <p>You can independently show or hide four kinds of pins: blue (no story), green (included in PDF), red (story but PDF off), and white with blue border (hidden photo).</p>
+              <p>For Travel Memoir exports, only green dots (included in PDF) are used. Before exporting, try showing only greens to confirm the photos and mood notes match the trip you want in the book—this also gives your LLM cleaner material. Under LLM Output you can ask the export prompt to target your story language or English.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">D. Share — what can I export or send?</h3>
+            <div class="faq-answer">
+              <p>Tap the Share icon (top-right). The sheet groups exports into Story → PDF memoir, Map, and Lists. Use the numbered items below.</p>
+
+              <p><strong>1. Story → PDF memoir (iPhone or iPad)</strong></p>
+              <p>Before you start: on the map, add a short story to the photos you want in the book and leave them as green dots (included in PDF). Red dots (story but PDF off) and hidden photos are not exported.</p>
+
+              <p><strong>Step (1) — Save export folder — LLM prompt</strong></p>
+              <ul>
+                <li>Tap Step (1). The app builds a folder with your selected stories and photos.</li>
+                <li>In the share sheet, save the whole folder to Files (or another app). Keep every item together.</li>
+                <li>Main files: llm_task_prompt.txt (copy this into your LLM), mapping.json, manifest.json, photos/, memoir.md, and memoir_template.html.</li>
+                <li>Open llm_task_prompt.txt in ChatGPT, Claude, Gemini, or another LLM. Send it as the task. The model should reply with structured JSON (sections, narratives, photo_ids)—not plain prose only.</li>
+                <li>Tip: In Settings → LLM Output you can ask for your story language or English in that prompt file.</li>
+              </ul>
+
+              <p><strong>Step (2) — Memoir preview — paste, Render, PDF (on device)</strong></p>
+              <ul>
+                <li>Tap Step (2). The app exports the same package and opens an in-app preview (mapping and photos are already loaded).</li>
+                <li>Paste the LLM’s full reply into the text box.</li>
+                <li>Tap Render Memoir. Check the layout and photos.</li>
+                <li>Tap Export PDF in the preview toolbar. Share or save the PDF like any other file.</li>
+              </ul>
+
+              <p><strong>Optional — Share Story as ZIP for Mac or PC</strong></p>
+              <ul>
+                <li>Use this if you prefer a computer browser or want to email one file.</li>
+                <li>Tap (Optional) Share Story as ZIP. Save or AirDrop the .zip.</li>
+                <li>On Mac or PC: unzip so you see llm_task_prompt.txt, mapping.json, photos/, and memoir_template.html in one folder.</li>
+                <li>Run the LLM on llm_task_prompt.txt on the computer (same as Step (1)).</li>
+                <li>Open memoir_template.html from inside that unzipped folder (double-click in Finder). If photos do not show in Safari, try Chrome, or in Terminal from that folder run: python3 -m http.server 8765 and open http://localhost:8765/memoir_template.html</li>
+                <li>Choose mapping.json if the page asks for it, paste the LLM JSON reply, tap Render Memoir, then Export PDF in the page (or use the files however you like).</li>
+              </ul>
+
+              <p><strong>2. Share Map Snapshot (visited countries)</strong></p>
+              <ul>
+                <li>Creates a shareable map image (JPG) of your footprint—not a PDF list.</li>
+                <li>Includes visited-country flags and location pins that match your current map filters and dot visibility settings.</li>
+                <li>You choose Map Style (light or dark) and Map Coverage (Asia Pacific, EMEA, or Americas).</li>
+                <li>Tap Generate, then share or save the image via the system share sheet.</li>
+              </ul>
+
+              <p><strong>3. Export Travel Plan (PDF)</strong></p>
+              <ul>
+                <li>Exports your future plans from the Travel Plans screen: countries/territories and UNESCO sites, grouped by plan year.</li>
+                <li>Produces a styled Letter-size PDF (header, stats row, two-column layout).</li>
+                <li>Share to Files, Mail, or AirDrop like any PDF. This is separate from the Story → PDF memoir steps above.</li>
+              </ul>
+
+              <p><strong>4. Export Achievement List (PDF)</strong></p>
+              <ul>
+                <li>Exports places you have already visited (from photo GPS, plus any manual corrections in Achievements).</li>
+                <li>Lists countries/territories by continent with flags, plus summary stats (count visited, world explored %, highest altitude).</li>
+                <li>Uses your cumulative achievement history, not only the current photo scan range.</li>
+                <li>Same styled PDF format as Travel Plan. Share like any PDF.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Shared iPhone or iPad — switch users with backup &amp; restore</h3>
+            <div class="faq-answer">
+              <p>PlatMemoir supports any number of people on the same device. There is no fixed “user slot” limit—you keep one backup file per person (or per trip) and restore the right file when needed.</p>
+
+              <p><strong>When to use this</strong></p>
+              <ul>
+                <li>A family iPad or classroom device where different people sign in with different Apple IDs over time.</li>
+                <li>Reinstalling the app or moving to a new device while keeping stories, Google map pins, travel plans, and achievement data.</li>
+              </ul>
+
+              <p><strong>Settings layout</strong></p>
+              <ul>
+                <li>Switch iPhone/iPad user — Step 1 export, then Step 2 clear. Clear stays locked until you save the .zip and tap “Yes, unlock Clear” (the app will not let anyone clear without that backup step).</li>
+                <li>Backup restore &amp; Google photos — restore a saved .zip when you come back (does not use Clear). Google Reconnect is only if pin previews stay blank after restore.</li>
+              </ul>
+
+              <p><strong>Recommended workflow (hand off to someone else)</strong></p>
+              <ol>
+                <li>Settings → Switch iPhone/iPad user → Step 1: Export handoff backup.</li>
+                <li>In the share sheet, save the .zip to Files or iCloud Drive. When asked, tap “Yes, unlock Clear” only after the file is really saved.</li>
+                <li>Rename the file so you can tell users apart—for example: PlatMemoir_Handoff_Backup_Alex_2026-05-18.zip or PlatMemoir_Handoff_Backup_Mom_2026-05-18.zip. The app exports a generic name; renaming in Files is up to you and strongly recommended on a shared device.</li>
+                <li>Step 2: Clear all PlatMemoir data (does not delete Apple Photos or Google Takeout folders on disk).</li>
+                <li>The next person signs in, allows Photos, and scans iCloud in Settings → Data Sources.</li>
+              </ol>
+
+              <p><strong>Restore (same person coming back or after reinstall)</strong></p>
+              <p>Use this when you return to a shared device, get a new iPhone/iPad, or reinstall the app and want your own PlatMemoir data back—not when you are handing the device to someone else for the first time (they use their Apple ID and scan iCloud, or restore their own .zip).</p>
+              <p>You do not use Clear when you come back. Clear only exists inside Switch iPhone/iPad user and only unlocks after that screen’s export-and-save step. While someone else’s data (or a fresh empty app) is on the device, you are not meant to Clear first—you pick your own .zip under Backup restore &amp; Google photos and Restore replaces what is on the device with your backup.</p>
+              <ol>
+                <li>Settings → Backup restore &amp; Google photos → Restore from backup… and pick the correct .zip (use your name/date in the filename to choose the right one).</li>
+                <li>Allow Photos access and tap Scan iCloud Photos if you use iCloud pins.</li>
+                <li>Open the map and confirm your blue (iCloud) and Google pins look right before you rely on the data again.</li>
+                <li>Only if Google pin previews are blank: Settings → Backup restore &amp; Google photos → Google Reconnect, then pick the Takeout folder that contains your JPG/HEIC files (e.g. after moving Takeout or on a new device).</li>
+              </ol>
+
+              <p><strong>What is (and is not) in the backup</strong></p>
+              <ul>
+                <li>Included: stories, map pin metadata (Google and, in newer backups, iCloud points), travel plans, visited countries, PDF include/hide flags, achievement altitude, Google folder bookmarks.</li>
+                <li>Not included: your full iCloud photo library or Google image files on disk—you still need Photos access; Google previews use your Takeout folder on this device (often restored automatically from the backup’s folder bookmark).</li>
+              </ul>
+
+              <p><strong>Tips</strong></p>
+              <ul>
+                <li>You can keep many .zip files in Files—one per family member or per export date.</li>
+                <li>Leaving vs coming back: before you hand the iPad to someone else, use Switch user → Export (save the .zip, rename it with your name and date) → Clear. When you come back later, use only Backup restore → Restore from backup—no Clear step.</li>
+                <li>When is Clear used? Only the person who is leaving, and only after they export and confirm the backup on the Switch user screen. Clear wipes PlatMemoir’s local database so the next person does not see the leaver’s stories, pins, or plans. It does not delete photos in Apple Photos or files in your Google Takeout folder.</li>
+                <li>If the next person will restore their own .zip, Restore also replaces what is on the device—but the leaver should still Clear after export so the next person does not briefly see the previous map before they restore.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Google Takeout (JSON and JPG/HEIC) — how does it work?</h3>
+            <div class="faq-answer">
+              <p>Google Takeout lets you download your Google Photos metadata (and optionally image files). PlatMemoir can add those locations to the same map as iCloud photos.</p>
+
+              <p><strong>What to import</strong></p>
+              <ul>
+                <li>In Settings → Google Takeout JSON, tap Import and select a .json file or a folder from your Takeout download.</li>
+                <li>The app imports location data from JSON files only. It does not copy your whole photo library into the app.</li>
+              </ul>
+
+              <p><strong>JPG, HEIC, and folders</strong></p>
+              <ul>
+                <li>If you select a Takeout folder that also contains JPG or HEIC files next to the JSON, the app remembers that folder.</li>
+                <li>When you tap a Google-sourced pin on the map, PlatMemoir loads the matching image from that folder on demand.</li>
+                <li>Keep the JSON and image files in the same Takeout folder structure on your device or drive. If images move, pins may stay but photos might not open.</li>
+                <li>After a handoff restore, Google previews often work without extra steps. If a pin preview stays blank, use Settings → Backup restore &amp; Google photos → Google Reconnect and pick your Takeout folder again (common after moving Takeout or reinstalling the app).</li>
+              </ul>
+
+              <p><strong>Date range</strong></p>
+              <ul>
+                <li>Google points follow the same scan range as iCloud: Full Range or Select Range in Settings → Data Sources.</li>
+                <li>Narrowing the range filters which Takeout points are kept, similar to iCloud.</li>
+              </ul>
+
+              <p><strong>On the map</strong></p>
+              <ul>
+                <li>Google locations appear as pins like iCloud photos. You can add stories, include them in PDF export, and use them in the Story → PDF memoir flow if they are green dots with stories.</li>
+              </ul>
+
+              <p>Videos (MOV/MP4) in the folder are detected but not imported as map pins; only JSON geotags create points.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <section id="footer" class="footer-minimal">
+      <div class="inner">
+        <ul class="contact">
+          <li class="icon solid fa-home"><a href="/">Home</a></li>
+          <li class="icon solid fa-life-ring"><a href="/support/">App support</a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; PlatMemoir. All rights reserved.</li>
+          <li>Design: <a href="https://html5up.net/solid-state">Solid State</a> by HTML5 UP</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.scrollex.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

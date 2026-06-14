@@ -97,6 +97,43 @@ Check DNS: https://www.whatsmydns.net/#CNAME/www.platmemoir.com
 
 In GoDaddy you can create `support@platmemoir.com` and forward to your Gmail, then update `support/index.html`.
 
+## Step 8 — Hardcover waitlist (homepage + /photobook/)
+
+Both pages share one Formspree endpoint:
+
+1. Sign up at https://formspree.io (free tier works)
+2. Create a new form → copy the form id from `https://formspree.io/f/YOUR_ID`
+3. Edit `assets/waitlist-config.js`:
+
+```javascript
+window.PLATMEMOIR_SITE = {
+  formspreeId: 'YOUR_ID',
+  appStoreUrl: ''  // e.g. https://apps.apple.com/app/id123456789
+};
+```
+
+4. Push to GitHub. Submissions include:
+   - `email` — user address
+   - `source` — `homepage` or `photobook`
+   - `utm_source` / `utm_medium` — when user arrives from the PlatMemoir app
+
+**User paths**
+
+| Entry | Page | Form `source` |
+|-------|------|----------------|
+| App (3 links) | `/photobook/` | `photobook` + UTM |
+| Homepage footer | `/` | `homepage` |
+| Menu → Hardcover 2026 | `/photobook/` | `photobook` |
+
+## Step 9 — App Store badge (official artwork)
+
+1. Sign in at [App Store Marketing Guidelines](https://developer.apple.com/app-store/marketing/guidelines/)
+2. Download **Download on the App Store** badge (black, English—or your locale)
+3. Save the PNG as `assets/app-store-badge.png`
+4. In `assets/waitlist-config.js`, set `appStoreUrl` to your App Store product page
+
+**Do not** recreate the badge in CSS or change its colors. Use Apple’s file as-is; CTA copy above the badge is fine.
+
 ---
 
 ## Updating the site later

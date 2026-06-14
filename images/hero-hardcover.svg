@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2744"/>
+      <stop offset="100%" stop-color="#2e3141"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect x="80" y="120" width="420" height="560" rx="8" fill="#2a1e16" stroke="#c9a227" stroke-width="2"/>
+  <text x="290" y="380" text-anchor="middle" fill="#c9a227" font-family="Georgia,serif" font-size="28" letter-spacing="4">PLATMEMOIR</text>
+  <rect x="540" y="180" width="520" height="380" rx="6" fill="#f5f0e6" opacity="0.95"/>
+  <rect x="560" y="200" width="150" height="110" fill="#ccc"/>
+  <rect x="720" y="200" width="150" height="110" fill="#bbb"/>
+  <rect x="880" y="200" width="150" height="110" fill="#aaa"/>
+  <text x="600" y="720" fill="#888" font-family="system-ui,sans-serif" font-size="18">Replace with hero-hardcover.jpg</text>
+</svg>
