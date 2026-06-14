@@ -147,6 +147,27 @@
   margin-top: 1.5em;
 }
 
+.waitlist-feedback {
+  max-width: 28em;
+  margin: 1.25em auto 0;
+  text-align: center;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.waitlist-feedback.is-success {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.waitlist-feedback.is-error {
+  color: #f0b4b4;
+}
+
+.waitlist-form input[type="submit"]:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
 /* App Store promo band — full-width CTA (official badge from Apple) */
 .app-store-promo {
   margin: 2.5em 0 0;
