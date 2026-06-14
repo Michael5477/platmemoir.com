@@ -179,7 +179,7 @@
 }
 
 .waitlist-reset-link {
-  margin-top: 0.65em;
+  margin-top: 0.5em;
   padding: 0;
   border: 0;
   background: none;
@@ -216,6 +216,19 @@
   font-size: 1em;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.92);
+}
+
+.waitlist-feedback-email {
+  color: #fff;
+  font-weight: 700;
+}
+
+.waitlist-success-extra {
+  margin-top: 0.35em;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.68);
+  max-width: 24em;
 }
 
 @keyframes waitlist-success-in {

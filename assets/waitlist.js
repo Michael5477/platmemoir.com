@@ -7,6 +7,14 @@
     return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : '';
   }
 
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
   function getFeedbackEl(form) {
     var el = form.querySelector('.waitlist-feedback');
     if (!el) {
@@ -19,27 +27,56 @@
     return el;
   }
 
+  function getSubmitControl(form) {
+    return form.querySelector('input[type="submit"], button[type="submit"]');
+  }
+
+  function getSubmitLabel(form) {
+    return form.dataset.waitlistSubmitLabel || 'Join waitlist';
+  }
+
+  function restoreSubmitControl(form) {
+    var submitControl = getSubmitControl(form);
+    if (!submitControl) {
+      return;
+    }
+    var label = getSubmitLabel(form);
+    submitControl.disabled = false;
+    if (submitControl.tagName === 'INPUT') {
+      submitControl.value = label;
+    } else {
+      submitControl.textContent = label;
+    }
+  }
+
   function resetWaitlistForm(form) {
     form.classList.remove('is-success-state');
     setFeedback(form, '', '');
+    restoreSubmitControl(form);
     var emailInput = form.querySelector('input[name="email"]');
     if (emailInput) {
       emailInput.focus();
     }
   }
 
-  function setFeedback(form, message, type) {
+  function setFeedback(form, message, type, submittedEmail) {
     var el = getFeedbackEl(form);
     el.className = 'waitlist-feedback' + (type ? ' is-' + type : '');
 
     if (type === 'success') {
+      var emailLine = submittedEmail
+        ? 'We\'ll notify <strong class="waitlist-feedback-email">' + escapeHtml(submittedEmail) + '</strong> when hardcover publishing opens.'
+        : 'We\'ll email you when hardcover publishing opens.';
+
       el.innerHTML =
         '<span class="waitlist-feedback-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></span>' +
         '<strong class="waitlist-feedback-title">You\'re on the list!</strong>' +
-        '<span class="waitlist-feedback-detail">We\'ll email you when hardcover publishing opens.</span>' +
-        '<button type="button" class="waitlist-reset-link">Use a different email</button>';
+        '<span class="waitlist-feedback-detail">' + emailLine + '</span>' +
+        '<span class="waitlist-success-extra">Registering someone else, or want a second address on the list?</span>' +
+        '<button type="button" class="waitlist-reset-link">Add another email</button>';
       el.hidden = false;
       form.classList.add('is-success-state');
+      restoreSubmitControl(form);
       return;
     }
 
@@ -48,11 +85,12 @@
     el.hidden = !message;
   }
 
-  function getSubmitControl(form) {
-    return form.querySelector('input[type="submit"], button[type="submit"]');
-  }
-
   document.querySelectorAll('form.waitlist-form').forEach(function (form) {
+    var submitControl = getSubmitControl(form);
+    if (submitControl) {
+      form.dataset.waitlistSubmitLabel = submitControl.value || submitControl.textContent || 'Join waitlist';
+    }
+
     var sourceInput = form.querySelector('input[name="source"]');
     if (sourceInput && !sourceInput.value) {
       sourceInput.value = form.getAttribute('data-source') || 'website';
@@ -81,9 +119,8 @@
         return;
       }
 
-      var submitControl = getSubmitControl(form);
-      var defaultLabel = submitControl ? (submitControl.value || submitControl.textContent) : 'Join waitlist';
       var emailInput = form.querySelector('input[name="email"]');
+      var submittedEmail = emailInput ? emailInput.value.trim() : '';
       var succeeded = false;
 
       setFeedback(form, '', '');
@@ -111,7 +148,7 @@
         .then(function (result) {
           if (result.ok) {
             succeeded = true;
-            setFeedback(form, '', 'success');
+            setFeedback(form, '', 'success', submittedEmail);
             if (emailInput) {
               emailInput.value = '';
             }
@@ -139,12 +176,7 @@
           if (succeeded || !submitControl) {
             return;
           }
-          submitControl.disabled = false;
-          if (submitControl.tagName === 'INPUT') {
-            submitControl.value = defaultLabel;
-          } else {
-            submitControl.textContent = defaultLabel;
-          }
+          restoreSubmitControl(form);
         });
     });
   });
