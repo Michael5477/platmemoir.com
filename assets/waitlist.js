@@ -21,8 +21,18 @@
 
   function setFeedback(form, message, type) {
     var el = getFeedbackEl(form);
-    el.textContent = message;
     el.className = 'waitlist-feedback' + (type ? ' is-' + type : '');
+
+    if (type === 'success') {
+      el.innerHTML =
+        '<span class="waitlist-feedback-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></span>' +
+        '<strong class="waitlist-feedback-title">You\'re on the list!</strong>' +
+        '<span class="waitlist-feedback-detail">We\'ll email you when hardcover publishing opens.</span>';
+      el.hidden = false;
+      return;
+    }
+
+    el.textContent = message || '';
     el.hidden = !message;
   }
 
@@ -79,11 +89,7 @@
         })
         .then(function (result) {
           if (result.ok) {
-            setFeedback(
-              form,
-              "You're on the list. We'll email you when hardcover publishing opens.",
-              'success'
-            );
+            setFeedback(form, '', 'success');
             if (emailInput) {
               emailInput.value = '';
             }

@@ -156,11 +156,59 @@
 }
 
 .waitlist-feedback.is-success {
-  color: rgba(255, 255, 255, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+  padding: 1.5em 1.75em;
+  margin-top: 1.75em;
+  border: solid 2px rgba(120, 220, 160, 0.7);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(42, 110, 78, 0.55), rgba(30, 80, 60, 0.4));
+  box-shadow: 0 0 28px rgba(90, 200, 140, 0.2);
+  animation: waitlist-success-in 0.45s ease-out;
+}
+
+.waitlist-feedback-icon {
+  font-size: 2.25rem;
+  color: #8ee4b0;
+  line-height: 1;
+}
+
+.waitlist-feedback-title {
+  font-family: Raleway, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.waitlist-feedback-detail {
+  font-size: 1em;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@keyframes waitlist-success-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .waitlist-feedback.is-error {
-  color: #f0b4b4;
+  padding: 1em 1.25em;
+  border: solid 1px rgba(240, 140, 140, 0.55);
+  border-radius: 6px;
+  background: rgba(120, 40, 40, 0.25);
+  color: #f5c4c4;
+  font-weight: 600;
 }
 
 .waitlist-form input[type="submit"]:disabled {
