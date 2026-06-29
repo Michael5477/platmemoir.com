@@ -75,6 +75,11 @@
   margin-right: auto;
 }
 
+#banner p.hero-app-store {
+  margin-top: 1.75em;
+  margin-bottom: 0;
+}
+
 .spotlight .content h2.major {
   letter-spacing: 0.04em;
 }
